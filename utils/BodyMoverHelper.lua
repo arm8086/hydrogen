@@ -44,7 +44,7 @@ return {
 			  local OffsetCFrame = Remote:InvokeServer("GetOffset")
 			  
 			  RunService.RenderStepped:Connect(function()
-			    local AbsoluteOffset = chr.HumanoidRootPart.CFrame * OffsetCFrame
+			    local AbsoluteOffset = Character.HumanoidRootPart.CFrame * OffsetCFrame
 			    BodyPos.Position = AbsoluteOffset.Position
 			    BodyGyro.CFrame = AbsoluteOffset
 			  end)
