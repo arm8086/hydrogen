@@ -37,6 +37,7 @@ return {
 			  local LocalPlayer = Players.LocalPlayer
 			  
 			  local Character = LocalPlayer.Character
+			  
 			  LocalPlayer.CharacterAdded:Connect(function(NewCharacter)
 			    Character = NewCharacter
 			  end)
@@ -44,7 +45,7 @@ return {
 			  local OffsetCFrame = Remote:InvokeServer("GetOffset")
 			  
 			  RunService.RenderStepped:Connect(function()
-			    local AbsoluteOffset = Character.HumanoidRootPart.CFrame * OffsetCFrame
+			    local AbsoluteOffset = LocalPlayer.Character.HumanoidRootPart.CFrame * OffsetCFrame
 			    BodyPos.Position = AbsoluteOffset.Position
 			    BodyGyro.CFrame = AbsoluteOffset
 			  end)
