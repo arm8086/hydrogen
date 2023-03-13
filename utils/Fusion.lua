@@ -1,5 +1,5 @@
 --Fusion ported to a script.
---Ported manually by me 🗿
+--Ported manually by scan 🗿
 
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
